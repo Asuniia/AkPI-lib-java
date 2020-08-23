@@ -27,24 +27,24 @@ public class Logger {
     }
     
     public void info(final String msg) {
-        System.out.println("(" + Logger.format.format(new Date()) + ") (Info)  (C) " + ((this.prefix == null) ? "> " : ("|" + this.prefix + "| > ")) + msg);
+        System.out.println("(" + Logger.format.format(new Date()) + ") (Info)  (C) " + ((this.prefix == null) ? "> " : ("[" + this.prefix + "] > ")) + msg);
     }
     
     public void warn(final String msg) {
-        System.out.println("(" + Logger.format.format(new Date()) + ") (Warn)  (C) " + ((this.prefix == null) ? "> " : ("|" + this.prefix + "| > ")) + msg);
+        System.out.println("(" + Logger.format.format(new Date()) + ") (Warn)  (C) " + ((this.prefix == null) ? "> " : ("[" + this.prefix + "] > ")) + msg);
     }
     
     public void error(final String msg) {
-        System.out.println("(" + Logger.format.format(new Date()) + ") (Error) (C) " + ((this.prefix == null) ? "> " : ("|" + this.prefix + "| > ")) + msg);
+        System.out.println("(" + Logger.format.format(new Date()) + ") (Error) (C) " + ((this.prefix == null) ? "> " : ("[" + this.prefix + "] > ")) + msg);
     }
     
     public void fatal(final String msg) {
-        System.out.println("(" + Logger.format.format(new Date()) + ") (FATAL) (C) " + ((this.prefix == null) ? "> " : ("|" + this.prefix + "| > ")) + msg);
+        System.out.println("(" + Logger.format.format(new Date()) + ") (FATAL) (C) " + ((this.prefix == null) ? "> " : ("[" + this.prefix + "] > ")) + msg);
     }
     
     public void debug(final String msg) {
         if (Logger.isDebugEnabled) {
-            System.out.println("(" + Logger.format.format(new Date()) + ") (Debug) (C) " + ((this.prefix == null) ? "> " : ("|" + this.prefix + "| > ")) + msg);
+            System.out.println("(" + Logger.format.format(new Date()) + ") (Debug) (C) " + ((this.prefix == null) ? "> " : ("[" + this.prefix + "] > ")) + msg);
         }
     }
 
